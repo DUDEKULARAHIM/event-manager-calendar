@@ -492,7 +492,7 @@ const Calendar = () => {
     ) : (
       todayEvents.map((event, index) => (
         <li key={index} style={{ padding: '8px 10px', borderBottom: '1px solid #ddd' }}>
-          {event.title} - {event.description}
+          // {event.title} - {event.description}
 {/* <button 
            onClick={() => handleEventDelete(selectedDate, index)}
             style={{
@@ -507,6 +507,14 @@ const Calendar = () => {
             Delete
               
           </button> */ }
+
+         <div style={{ marginBottom: '10px' }}>
+            <strong>Title:</strong> {event.title}
+          </div>
+          <div style={{ marginBottom: '10px' }}>
+            <strong>Description:</strong> {event.description}
+          </div>
+
         </li>
       ))
     )}

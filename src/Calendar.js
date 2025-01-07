@@ -435,7 +435,7 @@ const Calendar = () => {
       todayEvents.map((event, index) => (
         <li key={index} style={{ padding: '8px 10px', borderBottom: '1px solid #ddd' }}>
           {event.title} - {event.description}
-         <button 
+       //  <button 
            onClick={() => handleEventDelete(selectedDate, index)}
             style={{
              backgroundColor: '#dc3545', 
@@ -446,9 +446,9 @@ const Calendar = () => {
               cursor: 'pointer', 
               marginLeft: '10px'
             }}>
-            //Delete
-              ...
-          </button>
+            Delete
+              
+       //   </button>
         </li>
       ))
     )}

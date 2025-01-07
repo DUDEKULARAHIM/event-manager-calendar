@@ -342,7 +342,7 @@ const Calendar = () => {
   </button>
 </div>
 
-{showCustomDate && (
+{/*{showCustomDate && (
   <div className="custom-date-input" style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
     <input
       type="number"
@@ -387,7 +387,65 @@ const Calendar = () => {
       Go
     </button>
   </div>
+)}**/}
+
+
+{showCustomDate && (
+  <div className="custom-date-input" style={{ marginTop: '10px' }}>
+    {/* Year Input */}
+    <div style={{ marginBottom: '10px' }}>
+      <input
+        type="number"
+        // value={customYear}
+        onChange={(e) => setCustomYear(Number(e.target.value))}
+        placeholder="Enter Year"
+        style={{
+           width: '90%',
+          padding: '10px',
+          fontSize: '1em',
+          borderRadius: '5px',
+          border: '1px solid #ddd',
+        }}
+      />
+    </div>
+    {/* Month Input */}
+    <div style={{ marginBottom: '10px' }}>
+      <input
+        type="number"
+        // value={customMonth}
+        min="1"
+        max="12"
+        onChange={(e) => setCustomMonth(Number(e.target.value))}
+        placeholder="Enter Month"
+        style={{
+           width: '90%',
+          padding: '10px',
+          fontSize: '1em',
+          borderRadius: '5px',
+          border: '1px solid #ddd',
+        }}
+      />
+    </div>
+    {/* Go Button */}
+    <div>
+      <button
+        onClick={goToCustomDate}
+        style={{
+          width: '100%',
+          backgroundColor: '#ffc107',
+          color: 'white',
+          border: 'none',
+          padding: '10px 15px',
+          borderRadius: '5px',
+          cursor: 'pointer',
+        }}
+      >
+        Go
+      </button>
+    </div>
+  </div>
 )}
+
 
       <table className="calendar">
         <thead>
@@ -435,7 +493,7 @@ const Calendar = () => {
       todayEvents.map((event, index) => (
         <li key={index} style={{ padding: '8px 10px', borderBottom: '1px solid #ddd' }}>
           {event.title} - {event.description}
-       //  <button 
+{/* <button 
            onClick={() => handleEventDelete(selectedDate, index)}
             style={{
              backgroundColor: '#dc3545', 
@@ -448,7 +506,7 @@ const Calendar = () => {
             }}>
             Delete
               
-       //   </button>
+          </button> */ }
         </li>
       ))
     )}
@@ -476,13 +534,13 @@ const Calendar = () => {
       placeholder="Event Title"
       value={newEvent.title}
       onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-      style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
+      style={{ width: '90%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
     />
     <textarea
       placeholder="Event Description"
       value={newEvent.description}
       onChange={(e) => setNewEvent({ ...newEvent, description: e.target.value })}
-      style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
+      style={{ width: '90%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
     />
     <button 
       onClick={handleEventSave} 

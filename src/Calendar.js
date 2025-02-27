@@ -2,11 +2,7 @@
 // import React, { useState, useEffect } from "react";
 // import "./Calendar.css"; // Ensure to add your CSS styles here
 
-// const Calendar = () => {
-//   const months = [
-//     "January", "February", "March", "April", "May", "June",
-//     "July", "August", "September", "October", "November", "December"
-//   ];
+
 
 //   const today = new Date();
 //   const [currentMonth, setCurrentMonth] = useState(today.getMonth());

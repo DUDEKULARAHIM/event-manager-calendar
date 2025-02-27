@@ -2,9 +2,6 @@
 // import React, { useState, useEffect } from "react";
 // import "./Calendar.css"; // Ensure to add your CSS styles here
 
-
-
-//   const today = new Date();
 //   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
 //   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 //   const [selectedDate, setSelectedDate] = useState(today.toDateString());
